@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>Bugo:UsernameValidator</id>
+	<name>Username Validator</name>
+	<version>0.1</version>
+	<type>modification</type>
+
+	<install for="2.1.*">
+		<hook hook="integrate_pre_load" function="Bugo\UsernameValidator::hooks#" file="$sourcedir/Class-UsernameValidator.php"/>
+		<require-file name="Sources/Class-UsernameValidator.php" destination="$sourcedir">Adding main source file</require-file>
+		<require-dir name="Themes/default/languages/UsernameValidator" destination="$languagedir">Adding language files</require-dir>
+	</install>
+
+	<uninstall for="2.1.*">
+		<hook hook="integrate_pre_load" function="Bugo\UsernameValidator::hooks#" file="$sourcedir/Class-UsernameValidator.php" reverse="true"/>
+		<remove-file name="$sourcedir/Class-UsernameValidator.php">Removing main source file</remove-file>
+		<remove-dir name="$languagedir/UsernameValidator">Removing language files</remove-dir>
+	</uninstall>
+</package-info>
