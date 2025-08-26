@@ -8,10 +8,11 @@
 
 The modification provides the ability to control created usernames.
 
-| Feature                                                                | Scope                                   |
-| ---------------------------------------------------------------------- | --------------------------------------- |
-| Preventing registration if the user enters matching username and email | Only during registration                |
-| Preventing the use of login/display names with forbidden characters    | During registration and profile editing |
+| Feature                                                     | Scope                            |
+| ----------------------------------------------------------- | -------------------------------- |
+| Prevent registration when username and email match          | Registration only                |
+| Restrict use of forbidden characters in login/display names | Registration and profile editing |
+| Enforce minimum length requirement for names                | Registration and profile editing |
 
 See the mod settings in the _Configuration => Modification Settings_ section.
 
@@ -22,6 +23,7 @@ See the mod settings in the _Configuration => Modification Settings_ section.
 | Фича                                                                        | Область действия                             |
 | --------------------------------------------------------------------------- | -------------------------------------------- |
 | запрет на регистрацию, если пользователь вводит совпадающие имя и имейл     | Только при регистрации                       |
-| запрет на использование имён (логинов и ников), содержащих заданные символы | При регистрации и при редактировании профиля |
+| запрет на использование имён, содержащих заданные символы                   | При регистрации и при редактировании профиля |
+| ограничение на минимальную длину имён                                       | При регистрации и при редактировании профиля |
 
 См. настройки мода в разделе _Конфигурация => Настройки модов_
