@@ -9,7 +9,7 @@
  * @copyright 2025 Bugo
  * @license https://opensource.org/licenses/MIT The MIT License
  *
- * @version 0.2
+ * @version 0.2.1
  */
 
 namespace Bugo;
@@ -59,7 +59,7 @@ class UsernameValidator
 	{
 		global $modSettings, $smcFunc, $txt;
 
-		if (empty($modSettings['uv_min_name_length']))
+		if (empty($modSettings['uv_min_name_length']) || empty($profile_vars['real_name']))
 			return;
 
 		if ($smcFunc['strlen']($profile_vars['real_name']) < (int) $modSettings['uv_min_name_length']) {
